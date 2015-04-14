@@ -1,0 +1,197 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden; 
+    background-color: rgb(247, 247, 247);
+    font-family: sans-serif;
+}
+.heading{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+h2{
+    color: grey;
+    clear: both;
+    color: rgb(30, 47, 124);
+    font-size: 21px;
+    padding: 3px 0px;
+    padding-left: 11px;
+    font-style: italic;
+    font-family: serif;
+    /* margin-top: 20px; */
+}
+h2.err{
+
+}
+h2.warn{
+
+}
+h2.info{
+
+}
+#tag-container-wrapper{
+    width: 100%;
+}
+.grid-container{
+    width: 100%;
+    padding: 20px;
+    clear:both;
+}
+.tag-grid{
+    float: left;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    line-height: 16px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#err-tag-container .tag-grid{
+    /*border-color: green;*/
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(252, 108, 108, 1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(252, 108, 108, 1);
+    box-shadow: 1px 1px 1px 0px rgba(252, 108, 108, 1);
+}
+#warn-tag-container .tag-grid{
+    /*border-color: yellow*/
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(219,219,0,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(219,219,0,1);
+    box-shadow: 1px 1px 1px 0px rgba(219,219,0,1);
+}
+#info-tag-container .tag-grid{
+    /*border-color: blue*/
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(0,34,255,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(0,34,255,1);
+    box-shadow: 1px 1px 1px 0px rgba(0,34,255,1);
+}
+#err-tag-container .tag-grid.threshold, 
+#warn-tag-container .tag-grid.threshold, 
+#info-tag-container .tag-grid.threshold{
+    background-color: rgb(252, 189, 189);
+    color: #fff;
+}
+.tag-type{
+    color: rgb(77, 77, 77);
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.tag-name{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: red;
+    color: rgb(77, 77, 77);
+}
+.tag-count{
+    color: rgb(77, 77, 77);
+    font-size: 20px;
+}
+#plot-logs{
+    clear: both;
+    padding: 30px 0px 10px 8px;
+    font-size: 20px;
+    color: grey;
+}
+
+
+#info-container-wrapper{
+    position: relative;
+    margin: 15px;
+}
+#info-container {
+    height: 100px;
+    overflow-y: auto;
+    background-color: rgb(9, 0, 63);
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#info-container div{
+    margin-bottom: 6px;
+}
+.app-err {
+    color: red;
+}
+.app-warn {
+    color: yellow;
+}
+.app-info {
+    color: blue;
+}
+.log-count{
+    display: inline-block;
+    text-align: center;
+    padding: 0px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.app-err .log-count{
+    border: 1px solid red;
+}
+.app-warn .log-count{
+    border: 1px solid yellow;
+}
+.app-info .log-count{
+    border: 1px solid blue;
+}
+.log-message{
+    display: inline-block;
+}
+
+#clear-logs{
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    color: grey;
+    border-radius: 17px;
+    right: 30px;
+    top: 10px;
+}
+#js-addict{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+

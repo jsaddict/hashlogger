@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hashLogger chart</title>
+    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/lib/select2.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/lib/prettyCheckable.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/chart/style.css">
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="js/lib/prettyCheckable.js"></script> -->
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.flot.navigate.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.flot.time.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.flot.threshold.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/moment.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.flot.axislabels.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="/js/lib/jquery.flot.symbol.js"></script>-->
+    <script language="javascript" type="text/javascript" src="js/chart/declarations.js"></script>
+    <script language="javascript" type="text/javascript" src="config/app.js"></script>
+    <script language="javascript" type="text/javascript" src="config/chart/app.js"></script>
+    <script language="javascript" type="text/javascript" src="config/chart/plot-draw-default.js"></script>
+    <script language="javascript" type="text/javascript" src="config/chart/plot-draw-err.js"></script>
+    <script language="javascript" type="text/javascript" src="config/chart/plot-draw-warn.js"></script>
+    <script language="javascript" type="text/javascript" src="config/chart/plot-draw-info.js"></script>
+    <script language="javascript" type="text/javascript" src="config/chart/plot-draw-options.js"></script>
+    <script language="javascript" type="text/javascript" src="js/chart/utils.js"></script>
+    <script language="javascript" type="text/javascript" src="js/chart/compute-config.js"></script>
+    <script language="javascript" type="text/javascript" src="js/chart/update-data.js"></script>
+    <script language="javascript" type="text/javascript" src="js/chart/plotter.js"></script>
+    <script language="javascript" type="text/javascript" src="js/chart/plot-cron.js"></script>
+    <script language="javascript" type="text/javascript" src="js/chart/init.js"></script>  
+</head>
+
+<body>
+    <div id="body-wrapper">
+        <h1 class="heading"><img src="img/hashlogger1.png" alt="hashlogger"></h1>
+        <a href="http://jsaddict.com" id="js-addict"><img src="img/jsaddict.jpg"></a>
+        <div id="graph-wrapper">
+            <div id="plot-processing">
+                <div id="processing-img"></div>
+            </div>
+            <div id="graph-container"></div>
+            <div id="prev-next-wrapper">
+                <div id="prev-button" class="nav-button button" value="previous"><span class="nav-icon" id="previous-icon"></span>Previous</div>
+                <div id="next-button" class="nav-button button" value="next">Next<span class="nav-icon" id="next-icon"></span></div>
+            </div>
+        </div>  
+        <div id='tooltip'></div>              
+        <div id="settings-wrapper">
+            <div id="settings-container">
+                <h2>Plot type</h2>
+                <div id="select-plot-type">
+                    <input type="radio" class="plot-type" name="plot-data-type" checked id="live-data" value="live"><label for="live-data">Live</label>
+                    <input type="radio" class="plot-type" name="plot-data-type" id="interval-data" value="interval"><label for="interval-data">Chart Interval</label></br>
+                </div>
+                <div id="interval-boundary-container">                    
+                    <label for="from-years">From</label>
+                    <input type="text" class="interval-input from-input" id="from-years" placeholder="Year" >
+                    <input type="text" class="interval-input from-input" id="from-months" placeholder="Month" >
+                    <input type="text" class="interval-input from-input" id="from-days" placeholder="Day" >
+                    <input type="text" class="interval-input from-input" id="from-hours" placeholder="Hour" >
+                    <input type="text" class="interval-input from-input" id="from-minutes" placeholder="Minute">
+                    <input type="text" class="interval-input from-input" id="from-seconds" placeholder="Second">
+                    </br>
+                    <label for="to-years">To</label>
+                    <input type="text" class="interval-input to-input" id="to-years" placeholder="Year">
+                    <input type="text" class="interval-input to-input" id="to-months" placeholder="Month">
+                    <input type="text" class="interval-input to-input" id="to-days" placeholder="Day">
+                    <input type="text" class="interval-input to-input" id="to-hours" placeholder="Hour">
+                    <input type="text" class="interval-input to-input" id="to-minutes" placeholder="Minute">
+                    <input type="text" class="interval-input to-input" id="to-seconds" placeholder="Second">
+                </div>
+                <h2>Count Interval</h2>
+                <div id="interval-select-container">
+                    <!-- <input type="radio" name="select-data-interval" class="select-interval" id="5-seconds" value="5#seconds"><label for="5-seconds">5 seconds</label> -->
+                </div>
+                <h2>Tags</h2>
+                <div id="check-list-container">
+                    <div class="tag-category-wrapper" id="err-category-wrapper"></div>
+                    <div class="tag-category-wrapper" id="warn-category-wrapper"></div>
+                    <div class="tag-category-wrapper" id="info-category-wrapper"></div>
+                </div>             
+                <div id="update-plot">Update</div>
+            </div>                  
+        </div>
+        <div id="info-container-wrapper">
+            <h2>Plot Logs</h2>
+            <div id="clear-logs">clear</div>
+            <div id="info-container"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

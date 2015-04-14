@@ -1,0 +1,32 @@
+{
+    "name": "hashlogger",
+    "version": "1.0.0",
+    "description": "A module to track logs and errors easily",
+    "homepage": "http://jsaddict.com",
+    "main": "./module/counter.js",
+    "keywords": [
+        "logger",
+        "logs",
+        "node",
+        "log",
+        "custom logger",
+        "logger",
+        "error wrapper",
+        "custom error"
+    ],
+    "author": {
+        "name": "Gopi M",
+        "email": "gopi4js@gmail.com"
+    },
+    "dependencies": {
+        "request": "latest",
+        "moment": "latest"
+    },
+    "devDependencies": {
+        "mocha": "latest",
+        "chai": "latest",
+        "express": "latest",
+        "mongodb": "latest"
+    },
+    "license": "MIT"
+}

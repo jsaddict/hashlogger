@@ -4,6 +4,6 @@ node_js:
 install:
   - npm install
 before_script:
-  - mocha -version
+  - mocha --version
 script:
   - mocha test/test_module/index.js

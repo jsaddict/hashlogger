@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+ — “0.10"
+install:
+ — npm install
+before_script:
+ — mocha —version
+script:
+ — mocha test/test_module/index.js
